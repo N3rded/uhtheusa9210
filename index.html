@@ -1,14 +1,21 @@
 <!DOCTYPE html> 
 <html> 
-<body><title>Rizz?</title>
-    <title>Sorry! This website is currently in the midst of being made!</title>
-    <p>&nbsp;</p>
-    <p id="text" style="font-size:15px;">HELP HELP HELP HELP HELP</p>
+<body><title>Containment09391-File0</title>
+    <header id='text' style="font:arial;position:absolute;top:350px;text-align:center;font-size:20px;">Sorry! This website is currently in the midst of being made!</header>
+    <header id='text2' style="font:arial;position:absolute;top:370px;text-align:center;font-size:20px;">Come bAck.pLe4s e when it is finished</header>
+    <p style="position:fixed;bottom:0px;right:5px;size:25px;">HELP HELP HELP HELP HELP</p>
+    <image style="width:100%;" src="leaf.png">
 </body>
 
-<script> 
+<script>
+    function set(){
+        document.getElementById('text').style.left = innerWidth / 2.5 + "px";
+        document.getElementById('text2').style.left = innerWidth / 2.5 + "px";
+        document.getElementById('text2').innerHTML = "Come back please when it is finished";
+        if(Math.random()<0.01)
+        document.getElementById('text2').innerHTML = "Come bAck.pLe4s e when it is finished";delay(10000);
+    }setInterval(set,1);
 </script> 
 
 </body> 
 </html>
-
