@@ -3,16 +3,16 @@
 <body>
 <p id='bl0ck' style="opacity:0%;position:fixed;bottom:5px;right:5px;text-align:right;">01100100 01101111 <br>00100000 01001110 01001111 <br>01010100 00100000 01100011 01101111 01101110 01110100 01101001 01101110 <br>01110101 01100101 00100000 01010000 01001100 01000101 01000001 01010011 01000101</p>
 <script>
+var dis = 0;
 function show(){document.getElementById('bl0ck').style.display = "block";}
 
 function display(){
-    var dis = 0;
     document.getElementById('bl0ck').style.display = "none";
     setTimeout(show,Math.random()*1000);
     if(dis < 30){
         dis++;
         document.getElementById('bl0ck').style.opacity = dis + "%";
-        setTimeout(display,100);
+        setTimeout(display,400);
     }
 }setTimeout(display,100);
 </script>
