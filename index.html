@@ -9,6 +9,7 @@
 </body>
 
 <script>
+    var link = 0;
     function back(){
         document.getElementById('text2').innerHTML = "Come back please when it is finished";
     }
@@ -33,15 +34,14 @@
     }setInterval(set,1);
 
     function opacity(){
-        var link = 0;
-        if(link < 30){
+        if(link < 60){
             link++
-            document.getElementById('b3d').style.opacity = link/2 + "%";
+            document.getElementById('b3d').style.opacity = link/6 + "%";
             document.getElementById('link').style.opacity = link + "%";
-            setTimeout(opacity,1000);
+            setTimeout(opacity,400);
         }
     }
-    setTimeout(opacity,1000);
+    setTimeout(opacity,400);
 </script> 
 </body> 
 </html>
