@@ -1,47 +1,128 @@
 <!DOCTYPE html> 
 <html> 
-<body><title>Containment09391-File0</title>
-    <image id='b3d' style="width:100%;height:100%;position:fixed;opacity:0%;object-fit:cover;object-position:0% 90%;" src="b3d.png"></image>
-    <image style="position:fixed;width:100%;" src="b4ckgr0und.png"></image>
-    <header id='text' style="font:arial;position:absolute;top:350px;font-size:20px;">Sorry! This website is currently in the midst of being made!</header>
-    <header id='text2' style="font:arial;position:absolute;top:370px;font-size:20px;">Come bAck.pLe4s e when it is finished</header>
-    <a href="./help.html" id='link' style="opacity:0%;position:fixed;bottom:0px;left:5px;size:25px;text-decoration:none;color:red;"></a>
+<style>
+    body {width:960px;background-color:gray}
+    .button {
+        overflow:hidden;
+        text-align:left;
+        height:30px;
+        width:500px;
+        color:white;
+        background:500px;
+        background-color:rgb(110, 110, 110);
+        border:none;
+        text-decoration:none;
+        left:0px;
+        padding-left:15px;
+        padding-right:100%;
+        position:relative;
+        top:0px;
+        font-size:120%}
+    @media screen and (max-width:900px), screen and (max-height:500px) {
+        body {width:960px;background-color:gray}
+    }
+</style>
+<body>
+    <title>www.hiloinvestigation.gov</title>
+    
+    <div style="position:fixed;white-space:nowrap;top:230px;left:0px;width:27%;height:100%;background-color:gray;">
+
+        <button onclick="fopen('creatures')" onmouseenter="select(this)" onmouseleave="unselect(this)" class="button">
+            <img src="folder.png" style="top:1px;left:-10px;position:relative;width:23px;height:23px;">
+            Creatures
+        </button><br>
+
+        <div id="creatures" style="display:none;">
+        <button onclick="fselect('C0')" onmouseenter="select(this)" onmouseleave="unselect(this)" class="button" style="padding-left:50px;">
+            <img src="text.png" style="top:1px;left:-5px;position:relative;width:23px;height:23px;">
+            Skibidi Toilet
+        </button><br>
+        <button onclick="fselect('C1')" onmouseenter="select(this)" onmouseleave="unselect(this)" class="button" style="padding-left:50px;">
+            <img src="text.png" style="top:1px;left:-5px;position:relative;width:23px;height:23px;">
+            Mr. No Balls
+        </button>
+        </div>
+
+
+
+        <button onclick="fopen('events')" onmouseenter="select(this)" onmouseleave="unselect(this)" class="button">
+            <img src="folder.png" style="top:1px;left:-10px;position:relative;width:23px;height:23px;">
+            Events
+        </button>
+
+        <div id="events" style="display:none;">
+            <button onclick="fselect('E0')" onmouseenter="select(this)" onmouseleave="unselect(this)" class="button" style="padding-left:50px;">
+                <img src="text.png" style="top:1px;left:-5px;position:relative;width:23px;height:23px;">
+                9/11
+            </button><br>
+            <button onclick="fselect('E1')" onmouseenter="select(this)" onmouseleave="unselect(this)" class="button" style="padding-left:50px;">
+                <img src="text.png" style="top:1px;left:-5px;position:relative;width:23px;height:23px;">
+                Shibuya Incident
+            </button>
+            </div>
+        </div>
+
+
+
+    <div style="overflow:auto;white-space:nowrap;position:absolute;top:230px;right:0px;width:73%;height:100%;background-color:rgb(189, 189, 189);">
+        <header class="files" id="default" style="font-family:Helvetica;font-size:30px;position:absolute;left:40%;top:20%;">No File Opened</header>
+        
+        <div class="files" id="C0" style="display:none;">
+            <header style="position:absolute;left:45%;top:50px;font-size:30px;">The No Rizz</header>
+            <p style="position:absolute;left:50px;font-size:20px;">jag iajeiorheahiophri[epoharhpo[hpio[r</p>
+        </div>
+
+
+        <div class="files" id="C1" style="display:none;">
+            <header style="position:absolute;left:45%;top:50px;font-size:30px;">The No Rizzler</header>
+            <p style="position:absolute;left:50px;font-size:20px;">jag iajeiorheahiophri[epoharhpo[hpio[r</p>
+        </div>
+
+
+        <div class="files" id="E0" style="display:none;">
+            <header style="position:absolute;left:45%;top:50px;font-size:30px;">Oopsy</header>
+            <header>Victim</header><img style="left:25%;position:absolute;top:100px;width:50%;height:50%;" src="b3d.png">
+            <p style="position:absolute;left:50px;font-size:20px;">jag iajeiorheahiophri[epoharhpo[hpio[r</p>
+        </div>
+
+
+        <div class="files" id="E1" style="display:none;">
+            <header style="position:absolute;left:45%;top:50px;font-size:30px;">kai</header>
+            <p style="position:absolute;left:50px;font-size:20px;">jag iajeiorheahiophri[epoharhpo[hpio[r</p>
+        </div>
+    </div>
+
+    <div style="position:fixed;top:0px;left:0px;width:100%;height:230px;background-color:blue;background-image:linear-gradient(blue, rgb(128, 172, 255));">
+        <header style="font-family:Helvetica;color:white;font-weight:bold;position:absolute;left:50%;top:34%;font-size:260%;">Rain Investigation</header>
+        <img src="hawaii-dept-logo.png" style="position:absolute;left:6%;top:4%;height:190px;width:190px;">
+    </div>
+
+    
 </body>
 
 <script>
-    var link = 0;
-    function back(){
-        document.getElementById('text2').innerHTML = "Come back please when it is finished";
-    }
-    function str(){
-        var ret = "";
-        for(i=0; i < Math.random() * 10; i++){
-            ret += " HELP"
-        } return ret;
-    }
-    function set(){
-        document.getElementById('text').style.left = innerWidth / 2.5 + "px";
-        document.getElementById('text2').style.left = innerWidth / 2.5 + "px";
-        document.getElementById('text').style.top = innerHeight / 2.5 - 20 + "px";
-        document.getElementById('text2').style.top = innerHeight / 2.5 + "px";
-        
-        if(Math.random()<0.1){
-        document.getElementById('link').innerHTML = str();
+    function show(x){x.syle.display = "block";}
+
+    function fselect(x){
+        document.querySelectorAll('.files').forEach(function(y){y.style.display = 'none';});
+  
+        document.getElementById(x).style.display = 'block';
         }
 
-        if(Math.random()<0.1)
-        document.getElementById('text2').innerHTML = "Come bAck.pLe4s e when it is finished";setTimeout(back,1500);
-    }setInterval(set,1);
-
-    function opacity(){
-        if(link < 60){
-            link++
-            document.getElementById('b3d').style.opacity = link/6 + "%";
-            document.getElementById('link').style.opacity = link + "%";
-            setTimeout(opacity,400);
-        }
+    function fopen(x) {
+    if (document.getElementById(x).style.display === "none") {
+        document.getElementById(x).style.display = "block";
+    } else {
+        document.getElementById(x).style.display = "none";
     }
-    setTimeout(opacity,400);
+    }
+
+    function select(x){
+        x.style.background = "rgb(189, 189, 189)";
+    }
+    function unselect(x){
+        x.style.background = "rgb(110, 110, 110)";
+    }
 </script> 
 </body> 
 </html>
